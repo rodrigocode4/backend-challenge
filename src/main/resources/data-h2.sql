@@ -1,0 +1,33 @@
+INSERT INTO vehicle (id,name,brand,model,description) VALUES
+  (1,'MTX-8901','Volkswagen','Gol','Lorem ipsum dolor sit amet'),
+  (2,'ZDF-5602','Fiat','Uno','Duis aute irure dolor in reprehenderit'),
+  (3,'ABH-2303','Fiat','Palio','Veículo sem posições com ignição ligada'),
+  (4,'BRT-3204','Fiat','Uno','Veículo sem posições com ignição desligada'),
+  (5,'UTR-2105','Volkswagen','Gol','Veículo sem posições');
+
+INSERT INTO position (id,vehicleId,datetime,ignition,hodometro,latitude,longitude,address) VALUES
+  ( 1,1,1612455145422, true,120000,-19.915,-43.945,'Rua V01, P01 - Centro'),
+  ( 2,1,1612455205422, true,120100,-19.915,-43.945,'Rua V01, P02 - Centro'),
+  ( 3,1,1612455265422,false,120200,-19.915,-43.945,'Rua V01, P03 - Centro'),
+  ( 4,1,1612455325422,false,120300,-19.915,-43.945,'Rua V01, P04 - Centro'),
+  ( 5,1,1612455385422, true,120400,-19.915,-43.945,'Rua V01, P05 - Centro'),
+  ( 6,1,1612455445422,false,120500,-19.915,-43.945,'Rua V01, P06 - Centro'),
+  ( 7,1,1612455505422, true,120600,-19.915,-43.945,'Rua V01, P07 - Centro'),
+  ( 8,2,1612455565422,false,120700,-19.915,-43.945,'Rua V02, P01 - Centro'),
+  ( 9,2,1612455625422, true,120800,-19.915,-43.945,'Rua V02, P02 - Centro'),
+  (10,2,1612455685422, true,120900,-19.915,-43.945,'Rua V02, P03 - Centro'),
+  (11,2,1612455745422, true,130000,-19.915,-43.945,'Rua V02, P04 - Centro'),
+  (12,2,1612455805422, true,130100,-19.915,-43.945,'Rua V02, P05 - Centro'),
+  (13,2,1612455865422,false,130200,-19.915,-43.945,'Rua V02, P06 - Centro'),
+  (14,2,1612455925422, true,130300,-19.915,-43.945,'Rua V02, P07 - Centro'),
+  (15,2,1612455985422, true,130400,-19.915,-43.945,'Rua V02, P08 - Centro'),
+  (16,2,1612456045422, true,130500,-19.915,-43.945,'Rua V02, P09 - Centro'),
+  (17,2,1612456105422,false,130600,-19.915,-43.945,'Rua V02, P10 - Centro'),
+  (18,3,1612456165422,false,130700,-19.915,-43.945,'Rua V03, P01 - Centro'),
+  (19,3,1612456225422,false,130800,-19.915,-43.945,'Rua V03, P02 - Centro'),
+  (20,3,1612456285422,false,130900,-19.915,-43.945,'Rua V03, P03 - Centro'),
+  (21,3,1612456345422,false,140000,-19.915,-43.945,'Rua V03, P04 - Centro'),
+  (22,4,1612456405422, true,140100,-19.915,-43.945,'Rua V04, P01 - Centro'),
+  (23,4,1612456465422, true,140200,-19.915,-43.945,'Rua V04, P02 - Centro'),
+  (24,4,1612456525422, true,140300,-19.915,-43.945,'Rua V04, P03 - Centro'),
+  (25,4,1612456585422, true,140400,-19.915,-43.945,'Rua V04, P04 - Centro');
