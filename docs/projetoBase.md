@@ -11,7 +11,7 @@ Para rodar o projeto, execute em um terminal o comando:
 , ou no windows:
 
 ```
-./gradlew.bat bootRun
+gradlew.bat bootRun
 ```
 
 Ao ser executado, o servidor escutará requisições http na porta 8080 por padrão.
