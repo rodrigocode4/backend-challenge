@@ -39,7 +39,7 @@ Vehicle:
 
 Position:
 - id
-- vehicleId
+- vehicle_id
 - datetime  (timestamp em milisegundos)
 - latitude
 - longitude

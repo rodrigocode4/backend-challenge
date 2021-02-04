@@ -5,7 +5,7 @@ INSERT INTO vehicle (id,name,brand,model,description) VALUES
   (4,'BRT-3204','Fiat','Uno','Veículo sem posições com ignição desligada'),
   (5,'UTR-2105','Volkswagen','Gol','Veículo sem posições');
 
-INSERT INTO position (id,vehicleId,datetime,ignition,hodometro,latitude,longitude,address) VALUES
+INSERT INTO position (id,vehicle_id,datetime,ignition,hodometro,latitude,longitude,address) VALUES
   ( 1,1,1612455145422, true,120000,-19.915,-43.945,'Rua V01, P01 - Centro'),
   ( 2,1,1612455205422, true,120100,-19.915,-43.945,'Rua V01, P02 - Centro'),
   ( 3,1,1612455265422,false,120200,-19.915,-43.945,'Rua V01, P03 - Centro'),
