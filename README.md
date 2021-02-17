@@ -10,7 +10,7 @@ O código existente foi criado com o [Spring initializr](https://start.spring.io
 - Siga as especificações abaixo.
   - Crie um README que explique como rodar a aplicação. Ele será utilizado por nós para verificar a aplicação.
   - Testes automatizados são opcionais, mas super recomendados.
-  - Para entrega deve ser enviado o link do seu repositório para o e-mail ***guilherme.miranda@intertrack.com.br*** com o título **Teste Front-End**.
+  - Para entrega deve ser enviado o link do seu repositório para o e-mail ***guilherme.miranda@intertrack.com.br*** com o título **Teste Back-End**.
   - Você pode entregar o teste em até 10 dias, mas se precisar de mais tempo é só falar com gente!
 
 ## Especificações técnicas
