@@ -1,4 +1,4 @@
-package br.com.intertrack.backendchallenge.resources;
+package br.com.intertrack.backendchallenge.controller;
 
 import br.com.intertrack.backendchallenge.model.Vehicle;
 import br.com.intertrack.backendchallenge.repository.VehicleRepository;
@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/vehicles")
-public class VehicleResource {
+public class VehicleController {
 
     @Autowired
     private VehicleRepository vehicleRepository;

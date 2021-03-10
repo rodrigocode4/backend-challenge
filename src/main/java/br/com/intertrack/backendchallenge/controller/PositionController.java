@@ -1,11 +1,10 @@
-package br.com.intertrack.backendchallenge.resources;
+package br.com.intertrack.backendchallenge.controller;
 
 import br.com.intertrack.backendchallenge.model.Position;
 import br.com.intertrack.backendchallenge.repository.PositionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/positions")
-public class PositionResource {
+public class PositionController {
 
     @Autowired
     private PositionRepository positionRepository;
