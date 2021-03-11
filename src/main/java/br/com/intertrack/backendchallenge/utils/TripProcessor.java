@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class Trip {
-    public List<List<Position>> getTrip(List<Position> positions) throws Exception {
+public class TripProcessor {
+    public List<List<Position>> getTrips(List<Position> positions) throws Exception {
         List<List<Position>> trips = new ArrayList<>();
 
         if (isAllIgnitionsOff(positions) || positions.size() == 0) {
