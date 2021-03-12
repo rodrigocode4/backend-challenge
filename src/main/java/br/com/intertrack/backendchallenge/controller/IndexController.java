@@ -9,7 +9,7 @@ import org.springframework.web.servlet.view.RedirectView;
 @RequestMapping("/")
 public class IndexController {
 
-    @GetMapping
+    @GetMapping(value = {"", "/", "/api"})
     RedirectView index() {
         return new RedirectView("/api/trips");
     }
