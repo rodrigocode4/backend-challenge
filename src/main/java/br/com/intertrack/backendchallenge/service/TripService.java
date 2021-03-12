@@ -14,10 +14,10 @@ import java.util.stream.Collectors;
 public class TripService {
 
     @Autowired
-    private PositionRepository positionRepository;
+    PositionRepository positionRepository;
 
     @Autowired
-    private TripProcessor tripProcessor;
+    TripProcessor tripProcessor;
 
     public List<Trip> findAll() throws Exception {
         List<Position> positions = positionRepository.findAll();

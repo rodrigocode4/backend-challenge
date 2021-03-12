@@ -11,7 +11,7 @@ import java.util.List;
 public class PositionService {
 
     @Autowired
-    private PositionRepository positionRepository;
+    PositionRepository positionRepository;
 
     public List<Position> findAll() {
         return positionRepository.findAll();

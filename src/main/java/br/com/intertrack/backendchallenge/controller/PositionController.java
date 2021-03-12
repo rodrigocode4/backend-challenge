@@ -17,9 +17,9 @@ import java.util.List;
 public class PositionController {
 
     @Autowired
-    private PositionRepository positionRepository;
+    PositionRepository positionRepository;
 
-    @GetMapping(value = {"", "/"})
+    @GetMapping
     List<Position> getPosition() {
         return positionRepository.findAll();
     }
@@ -38,7 +38,7 @@ public class PositionController {
         return new ResponseEntity<>(positions, HttpStatus);
     }
 
-    private HttpStatus validateHttpStatus(List<Position> positions) {
+    HttpStatus validateHttpStatus(List<Position> positions) {
         return positions.size() == 0 ? HttpStatus.NOT_FOUND : HttpStatus.OK;
     }
 }

@@ -14,9 +14,9 @@ import java.util.List;
 public class VehicleController {
 
     @Autowired
-    private VehicleRepository vehicleRepository;
+    VehicleRepository vehicleRepository;
 
-    @GetMapping(value = {"", "/"})
+    @GetMapping
     List<Vehicle> getVehicle() {
         return vehicleRepository.findAll();
     }
