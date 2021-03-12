@@ -42,7 +42,7 @@ public class TripService {
     public List<Trip> findByVehicleId(Integer vehicleId) throws Exception {
         List<Position> positions = positionRepository.findPositionByVehicleId(vehicleId);
         if (positions.size() == 0) {
-            throw new Exception("Nenhuma posição encontrada do veículo de id: " + vehicleId);
+            throw new Exception("Nenhuma posição encontrada do veículo com id: " + vehicleId);
         }
         return tripProcessor.getTrips(positions);
     }
