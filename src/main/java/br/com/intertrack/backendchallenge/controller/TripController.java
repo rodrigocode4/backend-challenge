@@ -1,6 +1,7 @@
 package br.com.intertrack.backendchallenge.controller;
 
 import br.com.intertrack.backendchallenge.model.Position;
+import br.com.intertrack.backendchallenge.model.Trip;
 import br.com.intertrack.backendchallenge.service.TripService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,9 +21,24 @@ public class TripController {
     @Autowired
     TripService tripService;
 
+    @GetMapping
+    ResponseEntity<List<Trip>> getAllTrip() {
+        List<Trip> trips = null;
+        HttpStatus STATUS = null;
+
+        try {
+            trips = tripService.findAll();
+            STATUS = HttpStatus.OK;
+        } catch (Exception e) {
+            trips = new ArrayList<>();
+            STATUS = HttpStatus.NOT_FOUND;
+        }
+        return new ResponseEntity(trips, STATUS);
+    }
+
     @GetMapping("/{plate:^[a-zA-Z]{3}-\\d{4}$}")
-    ResponseEntity<List<List<Position>>> getTrip(@PathVariable(value = "plate") String plate) {
-        List<List<Position>> trips = null;
+    ResponseEntity<List<Trip>> getTrip(@PathVariable(value = "plate") String plate) {
+        List<Trip> trips = null;
         HttpStatus STATUS = null;
 
         try {
@@ -32,12 +48,12 @@ public class TripController {
             trips = new ArrayList<>();
             STATUS = HttpStatus.NOT_FOUND;
         }
-        return new ResponseEntity<>(trips, STATUS);
+        return new ResponseEntity(trips, STATUS);
     }
 
     @GetMapping("/{vehicleId:[\\d]+}")
-    ResponseEntity<List<List<Position>>> getPositionByVehicleId(@PathVariable(value = "vehicleId") Integer vehicleId){
-        List<List<Position>> trips = null;
+    ResponseEntity<List<Position>> getPositionByVehicleId(@PathVariable(value = "vehicleId") Integer vehicleId){
+        List<Trip> trips = null;
         HttpStatus STATUS = null;
 
         try {
@@ -47,6 +63,6 @@ public class TripController {
             trips = new ArrayList<>();
             STATUS = HttpStatus.NOT_FOUND;
         }
-        return new ResponseEntity<>(trips, STATUS);
+        return new ResponseEntity(trips, STATUS);
     }
 }
