@@ -25,5 +25,5 @@ public class VehicleController {
     Vehicle getVehicleByName(@PathVariable(value = "name") String name) {
         return vehicleService.getVehicleByName(name.toUpperCase());
     }
-    
+
 }
