@@ -1,11 +1,11 @@
 package br.com.intertrack.backendchallenge.controller;
 
 import br.com.intertrack.backendchallenge.model.Vehicle;
-import br.com.intertrack.backendchallenge.repository.VehicleRepository;
+import br.com.intertrack.backendchallenge.service.VehicleService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -14,12 +14,16 @@ import java.util.List;
 public class VehicleController {
 
     @Autowired
-    VehicleRepository vehicleRepository;
+    VehicleService vehicleService;
 
     @GetMapping
-    List<Vehicle> getVehicle() {
-        return vehicleRepository.findAll();
+    List<Vehicle> getAllVehicles() {
+        return vehicleService.getAllVehicles();
     }
 
-
+    @GetMapping("/{name:^[a-zA-Z]{3}-\\d{4}$}")
+    Vehicle getVehicleByName(@PathVariable(value = "name") String name) {
+        return vehicleService.getVehicleByName(name.toUpperCase());
+    }
+    
 }
